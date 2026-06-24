@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dika ❤️ Naia</title>
+<style>
+body{
+margin:0;font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#7a0000,#ff4d4d);
+color:white;text-align:center;
+overflow-x:hidden;
+}
+.hero{padding:80px 20px;}
+h1{font-size:3em;}
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding:20px;}
+.gallery img{width:280px;max-width:90vw;border-radius:20px;box-shadow:0 0 15px rgba(255,255,255,.4);}
+.card{background:rgba(255,255,255,.15);margin:20px;padding:20px;border-radius:20px;}
+.btn{padding:15px 25px;border:none;border-radius:30px;background:white;color:#b30000;font-weight:bold;cursor:pointer;}
+.heart{position:fixed;top:-20px;animation:fall linear infinite;color:pink;}
+</style>
+</head>
+<body>
+<audio controls autoplay loop>
+<source src="asset6.mp3">
+</audio>
+
+<div class="hero">
+<h1>Dika ❤️ Naia</h1>
+<h2>4 Bulan Bersama</h2>
+<p>Setiap hari bersamamu adalah halaman baru dari cerita favoritku.</p>
+</div>
+
+<div class="card">
+<h2>Pesan Untuk Naia 💌</h2>
+<p>
+Hai Naia,<br><br>
+Terima kasih sudah menemani perjalanan ini selama 4 bulan yang penuh tawa,
+cerita lucu, dan kenangan indah. Mungkin kita tidak sempurna,
+tapi setiap momen bersamamu selalu terasa spesial.<br><br>
+Aku suka cara kamu membuat hari biasa menjadi lebih berwarna.
+Aku suka saat kita bercanda, foto bareng, dan menciptakan kenangan kecil yang akan selalu kuingat.
+<br><br>
+Aku cinta kamu ❤️
+<br><br>
+— Dika
+</p>
+<button class="btn" onclick="alert('Aku sayang kamu lebih dari kemarin, dan akan lebih dari hari ini ❤️')">Klik Kejutan</button>
+</div>
+
+<div class="gallery">
+<img src="asset1.jpg">
+<img src="asset2.jpg">
+<img src="asset3.webp">
+<img src="asset4.jpg">
+<img src="asset5.jpg">
+</div>
+
+<script>
+for(let i=0;i<30;i++){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML='❤️';
+h.style.left=Math.random()*100+'vw';
+h.style.animationDuration=(5+Math.random()*8)+'s';
+document.body.appendChild(h);
+}
+document.querySelectorAll('.heart').forEach((e)=>{
+e.animate([{transform:'translateY(-10vh)'},{transform:'translateY(110vh)'}],
+{duration:(5000+Math.random()*8000),iterations:Infinity});
+});
+</script>
+</body>
+</html>
